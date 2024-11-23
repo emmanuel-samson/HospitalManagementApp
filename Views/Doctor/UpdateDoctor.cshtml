@@ -1,0 +1,23 @@
+﻿@model HospitalManagementApp.Models.Enitities.Doctor
+
+<div class="container my-4 p-3" style="max-width: 600px; background-color: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h4 class="text-center text-primary mb-3">Update Doctor</h4>
+    <form asp-action="UpdateDoctor">
+        <div class="mb-2">
+            <label for="id" class="form-label">Id: @Model.Id</label>
+            <input type="hidden" id="id" name="id" value="@Model.Id" />
+        </div>
+        <div class="mb-2">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="@Model.Name" placeholder="Enter Name" required />
+        </div>
+        <div class="mb-2">
+            <label for="specialty" class="form-label">Specialty</label>
+            <input type="text" class="form-control" id="specialty" name="specialty" value="@Model.Specialty" placeholder="Enter Specialty" required />
+        </div>
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary px-4" style="background-color: #007bff; border-color: #007bff;">Update</button>
+        </div>
+    </form>
+</div>
+
